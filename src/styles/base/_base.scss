@@ -1,0 +1,129 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: $color1;
+}
+
+main {
+  width: 100%;
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  padding: 1rem;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-FamilyRoboto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.input-edit {
+  border: none;
+  border-radius: 1rem;
+  margin-left: auto;
+  padding: 0.2rem;
+  outline: none;
+  width: 70%;
+
+  transition: width 0.3s ease;
+
+  &:focus {
+    width: 80%;
+  }
+}
+
+.icon {
+  background-color: white;
+  border: none;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.icon i {
+  color: $color1;
+}
+
+.dropdown {
+  margin-left: 2rem;
+}
+
+.background-color-1 {
+  background-color: lighten($color: $color1, $amount: 3);
+}
+
+.transition {
+  transition: all 0.5s ease;
+}
+
+.btn-edit {
+  background: transparent;
+  border: none;
+  text-align: start;
+}
+
+@media (max-width: 992px) {
+  .input-edit {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    transition: none;
+    &:focus {
+      width: 100%;
+    }
+  }
+  .icon {
+    display: none;
+  }
+
+  .nav-link {
+    border-bottom: 1px solid lighten($color: $color1, $amount: 10);
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: lighten($color: $color1, $amount: 10);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.list-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.list-group-item {
+  background-color: darken($color: $color2, $amount: 20);
+  height: fit-content;
+  margin: 1.2rem 0.5rem 0 0.2rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  width: fit-content;
+
+  &:hover {
+    background-color: darken($color: $color2, $amount: 10);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 990px) {
+  .list-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 0.5rem;
+  }
+  .list-group-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .list-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-group-item {
+    width: 100%;
+  }
+}

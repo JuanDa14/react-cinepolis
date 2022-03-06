@@ -1,0 +1,95 @@
+.film__container {
+  display: flex;
+  justify-content: center;
+}
+
+.film__img {
+  height: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.film__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.film__button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-family: $font-FamilyLato;
+  padding: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.film__button-icon {
+  background: transparent;
+  border: none;
+  color: yellow;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($color: yellow, $amount: 5);
+  }
+}
+
+.film__button-icon-2 {
+  background: transparent;
+  border: none;
+  color: darken($color: rgb(255, 0, 0), $amount: 5);
+  font-size: 1.5rem;
+  padding: 0.3rem;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($color: rgb(255, 0, 0), $amount: 10);
+  }
+}
+
+.card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+.descriptions {
+  background-color: rgba(10, 10, 10, 0.534);
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 0.7s ease-in-out;
+  width: 100%;
+}
+
+.card:hover .descriptions {
+  clip-path: circle(75%);
+  left: 0px;
+  transition: all 0.7s ease-in-out;
+}
+
+.card:hover {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(0.97);
+}
+
+.card:hover img {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
+}
